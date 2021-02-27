@@ -1,0 +1,4 @@
+body{cursor:default;font-family:Arial, "微軟正黑體", "蘋果儷中黑", "Helvetica Neue", Helvetica, sans-serif}
+
+.home-wrapper{height:100vh;background:#000000}.home-wrapper .header{height:100vh;border:15px solid #2b2b2b;padding:5rem;text-align:center;position:relative;background-image:url(a022beac405c5ee2bddd9fc208365677.jpg);background-size:cover;background-position:50% 50%}.home-wrapper .header .b{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);color:#2b2b2b}.home-wrapper .header .b .l{width:300px;margin:0px auto}.home-wrapper .header .b .n{font-size:4rem;margin:0px;letter-spacing:20px}.home-wrapper .header .b .j-t{font-size:1.5rem;letter-spacing:5px}.home-wrapper .header .down{cursor:pointer;position:absolute;bottom:1rem;left:50%;transform:translate(-50%, 0%);width:50px}
+

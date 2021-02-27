@@ -1,0 +1,191 @@
+.desc-wrapper {
+    width: 100%;
+    background: #2b2b2b;
+    color: #ffffff;
+    cursor: crosshair;
+    overflow: hidden;
+    position: relative;
+
+    .moving-ball {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        background: #ff8d006b;
+        z-index: 5;
+    }
+
+    .back {
+        display: block;
+        position: fixed;
+        width: 75px;
+        left: 1rem;
+        top: 1rem;
+        opacity: 0.8;
+        transition-duration: .5s;
+        z-index: 2;
+
+        &:hover {
+            filter: none;
+        }
+    }
+
+    .bg {
+        width: 100%;
+        height: 400px;
+        transform: rotateX(180deg);
+        background-size: cover;
+        background-position: 50% 100%;
+        filter: grayscale(1);
+        opacity: 0.8;
+    }
+
+    .ocean {
+        background-image: url('../asset/ocean.jpg');
+    }
+
+    .influx {
+        background-image: url('../asset/influx.jpg');
+    }
+
+    .aifinpitchtw {
+        background-image: url('../asset/aifinpitchtw.jpg');
+    }
+
+    .jiangfloor {
+        background-image: url('../asset/jiangfloor.jpg');
+    }
+
+    .shinsafeng {
+        background-image: url('../asset/shinsafeng.jpg');
+    }
+
+    .cnt-box {
+        position: relative;
+        box-shadow: 0px 0px 10px 10px #2b2b2b;
+        z-index: 1;
+        padding: 5rem;
+        width: 100%;
+        min-height: 100vh;
+        color: #ffffff;
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            font-style: italic;
+        }
+
+        .hr {
+            height: 3px;
+            width: 100%;
+            background: #a2a9ff;
+            margin: 10px 0px;
+        }
+
+        .content {
+            width: 100%;
+            margin-bottom: 5rem;
+            overflow: hidden;
+
+            .cnt-row {
+                display: flex;
+                margin: 20px 0px;
+
+                .cnt-title {
+                    width: 200px;
+                }
+
+                .cnt-text {
+                    width: calc(100% - 200px);
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .link {
+            color: #131313;
+            position: sticky;
+            display: block;
+            left: 50%;
+            transform: translate(-50%, 0px);
+            width: 250px;
+            height: 75px;
+            text-align: center;
+            background: #131313;
+            line-height: 75px;
+            font-size: 19px;
+            font-weight: 700;
+            border: 4px solid #131313;
+            transition-property: color;
+            transition-duration: 0.3s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: #e1e1e1;
+                transform: scale(1);
+                transition-property: transform;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
+
+            &:hover:before {
+                transform: scale(0);
+            }
+
+            &:hover {
+                color: #e1e1e1;
+                text-decoration: none;
+            }
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        .moving-ball {
+            display: none;
+        }
+
+        .back {
+            opacity: 0.4;
+        }
+
+        .cnt-box {
+            padding: 10px;
+
+            .title {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .content {
+                margin-bottom: 0rem;
+
+                .cnt-row {
+                    display: block;
+
+                    .cnt-title {
+                        width: 100%;
+                    }
+
+                    .cnt-text {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .link {
+                position: initial;
+                transform: translate(0px, 0px);
+                margin: 0px auto;
+            }
+        }
+    }
+}
